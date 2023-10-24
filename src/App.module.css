@@ -1,0 +1,17 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 48px;
+  background-color: var(--color-accent);
+}
+
+.innerContainer {
+  background-color: var(--color-bg-inner);
+  padding: 2rem;
+  border-radius: 20px;
+  overflow: auto;
+  width: 300px;
+}

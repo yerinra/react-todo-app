@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--color-text);
+}
+.title {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.filterText.selected::after {
+  content: "";
+  display: block;
+  width: 10px;
+  margin: 0 auto;
+  border: 1px solid var(--color-text);
+}
+
+.filterText {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

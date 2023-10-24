@@ -1,0 +1,11 @@
+.todo {
+  font-size: 14px;
+  color: var(--color-text);
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.removeBtn {
+  margin-left: auto;
+}

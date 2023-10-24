@@ -1,0 +1,16 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--color-text);
+}
+
+.allClickBtn {
+  color: var(--color-text);
+}
+
+.allCloseBtn {
+  font-size: 14px;
+  border-radius: 100%;
+  color: var(--color-text);
+}
