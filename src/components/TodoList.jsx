@@ -10,10 +10,19 @@ import NavBar from "./NavBar";
 import styles from "./TodoList.module.css";
 
 const TodoList = ({ currentFilter }) => {
-  const [list, setList] = useState([
-    { text: "start a new react project", id: uuidv4(), status: "active" },
-  ]);
+  const [list, setList] = useState(() => getListFromLocalStorage());
+
   const [userInput, setUserInput] = useState("");
+
+  function getListFromLocalStorage() {
+    const todos = localStorage.getItem("todos");
+    return todos ? JSON.parse(todos) : [];
+  }
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(list));
+    console.log("ud");
+  }, [list]);
 
   const addTodo = (newTodo) => {
     setList([...list, newTodo]);
@@ -77,7 +86,7 @@ const TodoList = ({ currentFilter }) => {
         </button>
       </form>
       <NavBar list={list} setList={setList} />
-      <ul>
+      <ul className={styles.ul}>
         {filteredList.map((item) => (
           <TodoItem
             key={item.id}
